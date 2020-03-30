@@ -33,7 +33,7 @@ function visualisation(Obj, marginTitle, marginItem){ // //visualisation core fu
             }else{ //so its itreable
                 for(let j in Obj[i]){
                     if(Obj[i][j].__proto__.constructor.name == "Object"){
-                        visualisation(Obj[i], marginTitle + "\t", marginItem + "\t")
+                        visualisation(Obj[i][j], marginTitle + "\t", marginItem + "\t")
                     }
                 }
             }
@@ -51,3 +51,9 @@ function visualisation(Obj, marginTitle, marginItem){ // //visualisation core fu
     import it to your Nodejs app ussing this statement :
     module.exports = objTree() ;
 */
+objTree({
+    "userId": 1,
+    "id": 1,
+    "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+    "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+  });
